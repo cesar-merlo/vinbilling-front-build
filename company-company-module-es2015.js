@@ -3536,20 +3536,21 @@ class ProfileComponent {
         this.subscriptions.push(sub);
     }
     buildForm() {
+        var _a, _b, _c, _d, _e, _f, _g, _h, _j;
         this.profileForm = this.fb.group({
-            name: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            contact_name: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            address_line_1: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            address_line_2: [{ value: "", disabled: !this.isEditionAble }, []],
-            zip: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            office_phone: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            fax: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            city: [{ value: "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
-            starting_invoice_number: [{ value: "", disabled: true }],
+            name: [{ value: ((_a = this.company) === null || _a === void 0 ? void 0 : _a.name) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            contact_name: [{ value: ((_b = this.company) === null || _b === void 0 ? void 0 : _b.contact_name) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            address_line_1: [{ value: ((_c = this.company) === null || _c === void 0 ? void 0 : _c.address_line_1) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            address_line_2: [{ value: ((_d = this.company) === null || _d === void 0 ? void 0 : _d.address_line_2) || "", disabled: !this.isEditionAble }, []],
+            zip: [{ value: ((_e = this.company) === null || _e === void 0 ? void 0 : _e.zip) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            office_phone: [{ value: ((_f = this.company) === null || _f === void 0 ? void 0 : _f.office_phone) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            fax: [{ value: ((_g = this.company) === null || _g === void 0 ? void 0 : _g.fax) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            city: [{ value: ((_h = this.company) === null || _h === void 0 ? void 0 : _h.city.id) || "", disabled: !this.isEditionAble }, [_angular_forms__WEBPACK_IMPORTED_MODULE_2__["Validators"].required]],
+            starting_invoice_number: [{ value: ((_j = this.company) === null || _j === void 0 ? void 0 : _j.starting_invoice_number) || "", disabled: true }],
         });
     }
     loadFormData() {
-        var _a;
+        var _a, _b, _c;
         if (this.company) {
             this.profileForm.setValue({
                 name: this.company.name,
@@ -3557,8 +3558,8 @@ class ProfileComponent {
                 address_line_1: this.company.address_line_1,
                 address_line_2: (_a = this.company.address_line_2) !== null && _a !== void 0 ? _a : "",
                 zip: this.company.zip,
-                office_phone: this.company.office_phone,
-                fax: this.company.fax,
+                office_phone: (_b = this.company.office_phone) !== null && _b !== void 0 ? _b : "",
+                fax: (_c = this.company.fax) !== null && _c !== void 0 ? _c : "",
                 city: this.company.city.id,
                 starting_invoice_number: this.company.starting_invoice_number,
             });

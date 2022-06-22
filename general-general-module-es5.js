@@ -1493,22 +1493,22 @@
         }, {
           key: "loadFormData",
           value: function loadFormData() {
-            var _a, _b, _c, _d, _e;
+            var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
 
             if (this.user) {
               this.userForm.setValue({
-                email: this.user.email,
-                first_name: this.user.first_name,
-                last_name: this.user.last_name,
-                phone: this.user.phone,
-                office_phone: this.user.office_phone,
-                city: this.user.city.id,
-                commission: this.user.commission,
-                canEmailInvoices: (_a = this.user.roles) === null || _a === void 0 ? void 0 : _a.includes("INVOICE_EMAIL"),
-                canModifyCustomers: (_b = this.user.roles) === null || _b === void 0 ? void 0 : _b.includes("HANDLE_CUSTOMERS"),
-                isManager: (_c = this.user.roles) === null || _c === void 0 ? void 0 : _c.includes("MANAGER"),
-                isAdmin: (_d = this.user.roles) === null || _d === void 0 ? void 0 : _d.includes("ADMIN"),
-                isDriver: (_e = this.user.roles) === null || _e === void 0 ? void 0 : _e.includes("USER"),
+                email: (_a = this.user.email) !== null && _a !== void 0 ? _a : "",
+                first_name: (_b = this.user.first_name) !== null && _b !== void 0 ? _b : "",
+                last_name: (_c = this.user.last_name) !== null && _c !== void 0 ? _c : "",
+                phone: (_d = this.user.phone) !== null && _d !== void 0 ? _d : "",
+                office_phone: (_e = this.user.office_phone) !== null && _e !== void 0 ? _e : "",
+                city: (_f = this.user.city.id) !== null && _f !== void 0 ? _f : "",
+                commission: (_g = this.user.commission) !== null && _g !== void 0 ? _g : "",
+                canEmailInvoices: (_h = this.user.roles) === null || _h === void 0 ? void 0 : _h.includes("INVOICE_EMAIL"),
+                canModifyCustomers: (_j = this.user.roles) === null || _j === void 0 ? void 0 : _j.includes("HANDLE_CUSTOMERS"),
+                isManager: (_k = this.user.roles) === null || _k === void 0 ? void 0 : _k.includes("MANAGER"),
+                isAdmin: (_l = this.user.roles) === null || _l === void 0 ? void 0 : _l.includes("ADMIN"),
+                isDriver: (_m = this.user.roles) === null || _m === void 0 ? void 0 : _m.includes("USER"),
                 receiveEmail: false
               });
               this.selectedState = this.user.city.state_code;
